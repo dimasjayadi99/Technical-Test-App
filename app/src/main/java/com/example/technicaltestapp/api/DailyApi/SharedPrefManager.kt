@@ -9,7 +9,7 @@ class SharedPrefManager private constructor(private val mCtx : Context){
     val isLoggedIn: Boolean
         get() {
             val sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE)
-            return sharedPreferences.getString("id", null)?.toIntOrNull() != null
+            return sharedPreferences.getString("nik", "")?.toIntOrNull() != null
         }
 
     val user: UserAuth
